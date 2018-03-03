@@ -1,0 +1,11 @@
+{
+  "memoStoreFile": "./data/memos.json",
+  "chalkSet": {
+    "titleColor": "yellow",
+    "textColor": "red"
+  },
+  "boxenSet": {
+    "style": "single",
+    "padding": 1
+  }
+}
