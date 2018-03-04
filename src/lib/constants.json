@@ -2,7 +2,7 @@
   "memoStoreFile": "./data/memos.json",
   "chalkSet": {
     "titleColor": "yellow",
-    "textColor": "red"
+    "contentColor": "red"
   },
   "boxenSet": {
     "style": "single",

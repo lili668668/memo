@@ -9,7 +9,7 @@ module.exports = (memo) => {
       console.error(err)
       return
     }
-    const memoContant = `${chalk[constants.chalkSet.titleColor](data)} \n ${chalk[constants.chalkSet.textColor](memo.text)}`
+    const memoContant = `${chalk[constants.chalkSet.titleColor](data)} \n ${chalk[constants.chalkSet.contentColor](memo.content)}`
     console.log()
     console.log(boxen(memoContant, { 
       padding: constants.boxenSet.padding, 
