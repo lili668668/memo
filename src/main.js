@@ -7,9 +7,16 @@ module.exports = (argv) => {
     .usage('[command] [options]')
 
   program
-    .command('show [memo name]')
+    .command('show [memo_name]')
+    .alias('s')
     .description('show all memo')
     .action((name) => commands.show(name))
+
+  program
+    .command('*')
+    .action((env) => {
+      console.log(`There are no ${env} command, please check -h.`)
+    })
 
   program.parse(argv)
 }
