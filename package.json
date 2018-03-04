@@ -2,9 +2,8 @@
   "name": "memo",
   "version": "1.0.0",
   "description": "memo",
-  "main": "memo.js",
   "scripts": {
-    "start": "node memo.js"
+    "start": "node ./src/memo.js"
   },
   "author": "ballfish",
   "license": "MIT",
