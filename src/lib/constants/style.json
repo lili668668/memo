@@ -1,5 +1,4 @@
 {
-  "memoStoreFile": "./data/memos.json",
   "chalkSet": {
     "titleColor": "yellow",
     "contentColor": "red"

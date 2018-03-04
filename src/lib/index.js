@@ -1,4 +1,5 @@
 module.exports = {
-  constants: require('./constants.json'),
-  show: require('./show.js'),
+  constants: require('./constants'),
+  commands: require('./commands'),
+  memo: require('./memo'),
 }

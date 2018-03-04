@@ -1,7 +1,7 @@
 const program = require('commander')
-const jfs = require('jfs')
-const fs = require('fs')
-const { show, constants } = require('./lib')
+const { show } = require('./lib/commands')
+const memo = require('./lib/memo')
+const { errorCode } = require('./lib/constants')
 
 program
   .description('show memos, default show all memos')
@@ -9,9 +9,14 @@ program
 
 const names = program.args
 
-if (!fs.existsSync(constants.memoStoreFile)) process.exit(1)
-const store = new jfs(constants.memoStoreFile)
-const memos = store.getSync('memos')
+let memos
+try {
+  memos = memo.getMemos()
+} catch (err) {
+  if (err.message === errorCode.NoMemos) process.exit(1)
+  else console.log(err)
+}
+
 if (names.length === 0) {
   memos.forEach(memo => show(memo))
 } else {
