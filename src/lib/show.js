@@ -10,7 +10,6 @@ module.exports = (memo) => {
       return
     }
     const memoContant = `${chalk[constants.chalkSet.titleColor](data)} \n ${chalk[constants.chalkSet.contentColor](memo.content)}`
-    console.log()
     console.log(boxen(memoContant, { 
       padding: constants.boxenSet.padding, 
       borderStyle: constants.boxenSet.style, 

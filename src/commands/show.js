@@ -6,12 +6,13 @@ module.exports = (name) => {
   if (!fs.existsSync(constants.memoStoreFile)) return 
   const store = new jfs(constants.memoStoreFile)
   const memos = store.getSync('memos')
-  if (!name) {
+  if (name.length === 0) {
     memos.forEach(memo => show(memo))
-  }
-  else {
-    const memo = memos.find(memo => memo.name === name)
-    if (memo) show(memo)
-    else console.log(`No ${name} memo.`)
+  } else {
+    name.forEach((n) => {
+      const sm = memos.find(memo => memo.name === n)
+      if (sm) show(sm)
+      else console.log(`No ${n} memo.`)
+    })
   }
 }
