@@ -5,6 +5,7 @@ program
   .usage('[command] [options]')
   .command('show [memoName...]', 'show memos, default show all memos').alias('s')
   .command('add', 'add a memo').alias('a')
+  .command('remove <memoName> [otherMemoName...]', 'remove memos').alias('rm')
   
 program.parse(process.argv)
 

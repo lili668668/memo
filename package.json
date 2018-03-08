@@ -12,6 +12,7 @@
     "chalk": "^2.3.1",
     "commander": "^2.14.1",
     "figlet": "^1.2.0",
+    "inquirer": "^5.1.0",
     "jfs": "^0.3.0"
   },
   "devDependencies": {
